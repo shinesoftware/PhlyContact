@@ -32,7 +32,7 @@ class ContactForm extends Form
             'name' => 'from',
             'type' => 'Zend\Form\Element\Text',
             'options' => array(
-                'label' => 'From:',
+                'label' => _('From'),
             ),
         ));
 
@@ -40,7 +40,7 @@ class ContactForm extends Form
             'name'  => 'subject',
             'type' => 'Zend\Form\Element\Text',
             'options' => array(
-                'label' => 'Subject:',
+                'label' => _('Subject'),
             ),
         ));
 
@@ -49,13 +49,13 @@ class ContactForm extends Form
             'name'  => 'body',
             'type'  => 'Zend\Form\Element\Textarea',
             'options' => array(
-                'label' => 'Your message:',
+                'label' => _('Your message'),
             ),
         ));
 
         $captcha = new Element\Captcha('captcha');
         $captcha->setCaptcha($this->captchaAdapter);
-        $captcha->setOptions(array('label' => 'Please verify you are human.'));
+        $captcha->setOptions(array('label' => _('Please verify you are human.')));
         $this->add($captcha);
 
         $this->add(new Element\Csrf('csrf'));
@@ -64,7 +64,7 @@ class ContactForm extends Form
             'name' => 'Send',
             'type'  => 'Zend\Form\Element\Submit',
             'attributes' => array(
-                'value' => 'Send',
+                'value' => _('Send'),
             ),
         ));
     }
