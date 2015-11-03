@@ -1,5 +1,5 @@
 {
-    "name": "phly/phly-contact",
+    "name": "shinesoftware/phly-contact",
     "description": "ZF2 Module implementing contact form functionality",
     "type": "library",
     "keywords": [
